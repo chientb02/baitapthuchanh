@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function number3 (arr) {
+        let max = arr[0] ;
+        for (let i = 1; i < arr.length; i++) {
+            if(max < arr[i]){
+                max = arr[i];
+                arr[i] = arr[0];
+                arr[0] = max;
+            }
+        }
+        let max1 = arr[1]
+        for (let j = 2; j < arr.length; j++) {
+            if(max1 < arr[j]){
+                max1 = arr[j];
+                arr[j] = arr[1];
+                arr[1] = max1;
+            }
+        }
+
+        let max2 = arr[2]
+        for (let j = 3; j < arr.length; j++) {
+            if(max2 < arr[j]) {
+                max2 = arr[j];
+            }
+        }
+        console.log(max2)
+    }
+    let arr = [1,2,5,8,9,10,3]
+    number3(arr)
+ </script>
+
+</html>

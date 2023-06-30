@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let  str1 = 'helloworld' ;
+    arrStr1 = str1.split('')
+    let str2 = 'heloo' ;
+    arrStr2 = str2.split('')
+    let count = 0 ;
+    let dem = arrStr2.length
+    function testString (arr1 , arr2) {
+
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < dem; j++) {
+                if (arr1[i] === arr2[j]){
+                    for (let k = j; k < dem ; k++) {
+                        arr2[k]= arr2[k+1] ;
+                    }
+                   count++;
+                    dem--;
+                }
+            }
+        }if(count === arrStr2.length){
+            return true
+        }else{
+            return false
+        }
+
+    }
+
+    let a= testString(arrStr1,arrStr2) ;
+    console.log(a)
+</script>
+</html>
